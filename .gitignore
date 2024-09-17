@@ -15,7 +15,8 @@
 # ================================
 # Directorios de build/compilación
 # ================================
-/.next                   # Directorio de compilación de Next.js
+/.next/
+/out/                # Directorio de compilación de Next.js
 /out                     # Directorio de exportación de Next.js (para builds estáticos)
 /build                   # Directorio de build de producción (si se usa)
 
