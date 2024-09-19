@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👐 Traductor de Lengua de Señas Española (LSE) 🌐
 
-## Getting Started
+Bienvenido/a al **Traductor de Lengua de Señas Española (LSE)**, un proyecto innovador que permite la traducción de señas a texto y voz en tiempo real, junto con un apartado educativo para aprender más sobre el lenguaje de señas. ¡Nuestro objetivo es hacer el mundo más accesible para todos! 🌍
 
-First, run the development server:
+---
+
+## ✨ Funcionalidades Principales
+
+- 🔄 **Traducción en Tiempo Real**: Convierte gestos de LSE en texto y voz utilizando inteligencia artificial.
+- 📚 **Aprendizaje de Lengua de Señas**: Recursos, videos y enlaces útiles para aprender el lenguaje de señas.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+**Backend**:  
+- 🐍 Django  
+- 🐘 PostgreSQL  
+- 🤖 TensorFlow  
+- 🔮 Keras  
+- 🎥 OpenCV  
+- ☁️ Amazon AWS  
+
+**Frontend**:  
+- ⚛️ Next.js  
+- ⚡ React  
+- 🎨 Tailwind CSS  
+- 🛠️ Shadcn  
+- 🔑 ClerkJS  
+
+---
+
+## 🚀 ¿Cómo ejecutar este proyecto?
+
+**Prerrequisitos:**
+
+*   **Python:** Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde [https://www.python.org/](https://www.python.org/).
+*   **PostgreSQL:** Descarga e instala PostgreSQL desde [https://www.postgresql.org/](https://www.postgresql.org/).
+    *   **Configuración:**
+        *   Crea una base de datos para el proyecto.
+        *   Crea un usuario y otorga los permisos necesarios sobre la base de datos.
+        *   Actualiza el archivo `settings.py` de Django con la información de conexión a tu base de datos:
+
+            ```python
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.postgresql',
+                    'NAME': 'tu_base_de_datos',  # Reemplaza con el nombre de tu base de datos
+                    'USER': 'tu_usuario',        # Reemplaza con tu usuario de PostgreSQL
+                    'PASSWORD': 'tu_contraseña',  # Reemplaza con tu contraseña
+                    'HOST': 'localhost',
+                    'PORT': '5432',
+                }
+            }
+            ```
+
+### 1️⃣ Clona los Repositorios 📂
+
+Para comenzar, necesitarás clonar los dos repositorios que contienen el **frontend** y el **backend** del proyecto:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clona el repositorio del backend
+git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-back.git
+
+# Clona el repositorio del frontend
+git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Configura el Backend 🖥️
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Accede al directorio del backend:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    cd Project_System_LSE-back
+    ```
 
-## Learn More
+2.  **Crea un entorno virtual y actívalo:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    py -m venv .venv
+    .venv\Scripts\activate  # Windows
+    source venv/bin/activate  # macOS/Linux
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.  **Instalar las dependencias:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Deploy on Vercel
+4.  **Aplicar las migraciones:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    py manage.py makemigrations
+    py manage.py migrate
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5.  **Crear un superusuario:**
+
+    ```bash
+    py manage.py createsuperuser
+    ```
+
+6.  **Ejecutar el servidor de desarrollo:**
+
+    ```bash
+    py manage.py runserver
+    ```
+
+7.  **Acceder al backend:**
+
+    *   Abre tu navegador web y visita: [http://127.0.0.1:8000/](http://127.0.0.1:8000/).🎉
+    *   Accede al panel de administración: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (utiliza las credenciales del superusuario).
+
+
+### 3️⃣ Configura el Frontend 🌐
+
+1.  **Accede al directorio del frontend:**
+
+    ```bash
+    cd Project_System_LSE-Front
+    ```
+
+2.  **Instala las dependencias del frontend:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Crea un archivo .env.local y agrega las siguientes variables:**
+
+    ```bash
+    NEXT_PUBLIC_CLERK_FRONTEND_API=tu_clerk_api_key
+    NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+    ```
+
+4.  **Inicia el servidor de desarrollo:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Acceder al frontend:**
+
+    *   Abre tu navegador web y visita: [http://localhost:3000/](http://localhost:3000/).🚀
+
+---
+
+## 👐 ¡Invitamos a la Comunidad a Contribuir!
+
+¡Nos encantaría contar con tu ayuda para mejorar este proyecto! Ya seas desarrollador, diseñador, experto en accesibilidad o simplemente alguien interesado en la lengua de señas, tu participación es valiosa. Puedes contribuir de las siguientes maneras:
+
+- 🐛 **Reporta Bugs**: Si encuentras algún problema, por favor crea una *issue*.
+- 💡 **Sugerencias**: Si tienes ideas o sugerencias, ¡somos todo oídos!
+- 🛠️ **Pull Requests**: ¡Envía tus mejoras o nuevas características a través de un *pull request*!
+- 🌍 **Difunde**: Comparte este proyecto con otros para que más personas se beneficien.
+
+Juntos podemos hacer que este proyecto sea más inclusivo y útil para la comunidad. 🤝
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la [Licencia MIT](LICENSE). Siéntete libre de utilizarlo y modificarlo según lo necesites. ✌️
+
+---
+
+## 💬 Contacto
+
+Para cualquier duda o comentario, por favor contacta a [fborjaz@unemi.edu.ec](mailto:fborjaz@unemi.edu.ec).
+
+---
+
+> **Nota:** Este proyecto está en constante desarrollo. Nuevas funcionalidades y mejoras serán agregadas regularmente. 🚧👷‍♂️
+
+---
