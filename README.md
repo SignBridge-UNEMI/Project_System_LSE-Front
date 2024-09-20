@@ -88,26 +88,38 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
     pip install -r requirements.txt
     ```
 
-4.  **Aplicar las migraciones:**
+4.  **Crea un archivo  ```.env ``` y agrega tu  ```SECRET_KEY ```: 🤫**
+
+    ```bash
+    SECRET_KEY=tu_clave_secreta_aquí 
+    ```
+    
+    - **Reemplaza** ```tu_clave_secreta_aquí``` con una clave secreta segura. Puedes generar una nueva usando:
+
+    ```bash
+    python -c 'import secrets; print(secrets.token_urlsafe(50))'
+    ```
+
+5.  **Aplicar las migraciones:**
 
     ```bash
     py manage.py makemigrations
     py manage.py migrate
     ```
 
-5.  **Crear un superusuario:**
+6.  **Crear un superusuario:**
 
     ```bash
     py manage.py createsuperuser
     ```
 
-6.  **Ejecutar el servidor de desarrollo:**
+7.  **Ejecutar el servidor de desarrollo:**
 
     ```bash
     py manage.py runserver
     ```
 
-7.  **Acceder al backend:**
+8.  **Acceder al backend:**
 
     *   Abre tu navegador web y visita: [http://127.0.0.1:8000/](http://127.0.0.1:8000/).🎉
     *   Accede al panel de administración: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (utiliza las credenciales del superusuario).
