@@ -1,6 +1,6 @@
 # 👐 Traductor de Lengua de Señas Española (LSE) 🌐
 
-Bienvenido/a al **Traductor de Lengua de Señas Española (LSE)**, un proyecto innovador que permite la traducción de señas a texto y voz en tiempo real, junto con un apartado educativo para aprender más sobre el lenguaje de señas. ¡Nuestro objetivo es hacer el mundo más accesible para todos! 🌍
+Bienvenido/a al **Traductor de Lengua de Señas (LSE)**, un proyecto innovador que permite la traducción de señas a texto y voz en tiempo real, junto con un apartado educativo para aprender más sobre el lenguaje de señas. ¡Nuestro objetivo es hacer el mundo más accesible para todos! 🌍
 
 ---
 
