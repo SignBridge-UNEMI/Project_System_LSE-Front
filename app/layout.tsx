@@ -33,7 +33,7 @@ export default function RootLayout({
         <header>
           <nav>
             <ul>
-              <li><a href="/home">PROBAR CAMARA</a></li>
+              <li><a href="/home">PROBAR CAMARA 2</a></li>
               <li><a href="/about">NOSOSTROS</a></li>
             </ul>
           </nav>
