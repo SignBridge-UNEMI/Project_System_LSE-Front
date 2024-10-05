@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-"use client"
-
->>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { Slot } from "@radix-ui/react-slot"
@@ -178,8 +173,4 @@ export {
   FormDescription,
   FormMessage,
   FormField,
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
