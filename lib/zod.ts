@@ -6,7 +6,7 @@ const refineSecurityField = (field: string | undefined, ctx: any, errorMessage: 
       return ctx.addIssue({
          code: z.ZodIssueCode.custom,
          message: errorMessage,
-      });   
+      });
    }
 };
 
@@ -25,6 +25,18 @@ export const registerSchema = z.object({
       .string({ required_error: "La contraseña es obligatoria" })
       .min(6, { message: "La contraseña debe tener más de 6 caracteres" })
       .max(32, { message: "La contraseña debe tener menos de 32 caracteres" }),
+
+   confirmPassword: z.string().min(6, { message: "La contraseña debe tener más de 6 caracteres" }).max(32, {
+      message: "La contraseña debe tener menos de 32 caracteres",
+   }).superRefine((val: string, ctx) => {
+      const { password } = (ctx as any).parent;
+      if (val !== password) {
+         ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "Las contraseñas no coinciden",
+         });
+      }
+   }),
 
    is_deaf: z.boolean().optional(),
    is_mute: z.boolean().optional(),
@@ -50,7 +62,7 @@ export const loginSchema = z.object({
    email: z
       .string({ required_error: "El correo electrónico es obligatorio" })
       .email({ message: "Correo electrónico no válido" }),
-      
+
    password: z
       .string({ required_error: "La contraseña es obligatoria" })
       .min(6, { message: "La contraseña debe tener más de 6 caracteres" })

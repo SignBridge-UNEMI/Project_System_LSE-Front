@@ -37,6 +37,7 @@ yarn-error.log*          # Logs de errores de Yarn
 # ================================
 .env                     # Archivo de variables de entorno
 .env*.local              # Archivos de variables de entorno específicas para distintos entornos (dev, prod, test)
+.env.local               # Archivo de variables de entorno local
 .env.development.local   # Ambiente de desarrollo
 .env.test.local          # Ambiente de testeo
 .env.production.local    # Ambiente de producción
