@@ -82,7 +82,8 @@ next-env.d.ts            # Archivo generado por Next.js para configurar TypeScri
 *.log                    # Archivos de log genéricos
 *.swp                    # Archivos temporales de swap generados por editores de texto (ej. Vim)
 *.swo                    # Otros archivos de swap
-node_modules
 
+# ================================
+# Dependencias de desarrollo necias
 .env
-.env.local
+node_modules
