@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // components/form-login.tsx
 "use client";
 
@@ -10,10 +11,25 @@ import { Button } from "@/components/ui/button"; // Importar componente de botó
 import {
   Form,
   FormControl,
+=======
+"use client";
+
+import { z } from "zod";
+import { loginSchema } from "@/lib/zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
+<<<<<<< HEAD
 } from "@/components/ui/form"; // Importar componentes del formulario
 import { Input } from "@/components/ui/input"; // Importar componente de entrada
 import { useRouter } from "next/navigation"; // Importar hook para navegación
@@ -61,10 +77,29 @@ const FormLogin = ({ isVerified, OAuthAccountNotLinked }: FormLoginProps) => {
         router.push("/dashboard"); // Redirigir al dashboard si la autenticación es exitosa
       }
     });
+=======
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+const FormLogin = () => {
+  const form = useForm<z.infer<typeof loginSchema>>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof loginSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values);
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
   }
 
   return (
     <div className="max-w-52">
+<<<<<<< HEAD
       <h1 className="mb-5 text-center text-2xl">Iniciar sesión</h1>
 
       {/* Mensaje de verificación de correo */}
@@ -85,6 +120,11 @@ const FormLogin = ({ isVerified, OAuthAccountNotLinked }: FormLoginProps) => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           {/* Campo de email */}
+=======
+      <h1>Login</h1>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
           <FormField
             control={form.control}
             name="email"
@@ -92,6 +132,7 @@ const FormLogin = ({ isVerified, OAuthAccountNotLinked }: FormLoginProps) => {
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
                   <Input placeholder="email" type="email" {...field} />
                 </FormControl>
                 <FormMessage /> {/* Mensaje de error para el campo */}
@@ -100,6 +141,16 @@ const FormLogin = ({ isVerified, OAuthAccountNotLinked }: FormLoginProps) => {
           />
 
           {/* Campo de contraseña */}
+=======
+                  <Input placeholder="email" 
+                  type="email"
+                  {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
           <FormField
             control={form.control}
             name="password"
@@ -107,6 +158,7 @@ const FormLogin = ({ isVerified, OAuthAccountNotLinked }: FormLoginProps) => {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
                   <Input placeholder="password" type="password" {...field} />
                 </FormControl>
                 <FormMessage /> {/* Mensaje de error para el campo */}
@@ -148,8 +200,25 @@ const FormLogin = ({ isVerified, OAuthAccountNotLinked }: FormLoginProps) => {
           <span>Iniciar sesión con Google</span>
         </ButtonSocial>
       </div>
+=======
+                  <Input placeholder="password" 
+                  type="password"
+                  {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit">Submit</Button>
+        </form>
+      </Form>
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default FormLogin; // Exportar el componente
+=======
+export default FormLogin;
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0

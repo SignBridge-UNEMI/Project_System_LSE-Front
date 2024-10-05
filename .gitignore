@@ -83,3 +83,6 @@ next-env.d.ts            # Archivo generado por Next.js para configurar TypeScri
 *.swp                    # Archivos temporales de swap generados por editores de texto (ej. Vim)
 *.swo                    # Otros archivos de swap
 node_modules
+
+.env
+.env.local

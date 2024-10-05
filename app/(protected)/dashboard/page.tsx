@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import ProtectedComponent from '../ProtectedComponent';
@@ -38,3 +39,12 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+=======
+const DashboardPage = () => {
+  return (
+    <div>DashboardPage</div>
+  )
+}
+
+export default DashboardPage
+>>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
