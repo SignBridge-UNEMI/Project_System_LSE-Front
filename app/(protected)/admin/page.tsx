@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Asegúrate de que getSession es una función en "@/auth"
 import LogoutButton from "@/components/logout-button";
 import { getSession } from "next-auth/react"; 
@@ -31,12 +30,3 @@ const AdminPage = async () => {
 };
 
 export default AdminPage;
-=======
-const AdminPage = () => {
-  return (
-    <div>AdminPage</div>
-  )
-}
-
-export default AdminPage
->>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0

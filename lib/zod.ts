@@ -6,11 +6,8 @@ const refineSecurityField = (field: string | undefined, ctx: any, errorMessage: 
       return ctx.addIssue({
          code: z.ZodIssueCode.custom,
          message: errorMessage,
-<<<<<<< HEAD
+
       });
-=======
-      });   
->>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
    }
 };
 
@@ -30,7 +27,6 @@ export const registerSchema = z.object({
       .min(6, { message: "La contraseña debe tener más de 6 caracteres" })
       .max(32, { message: "La contraseña debe tener menos de 32 caracteres" }),
 
-<<<<<<< HEAD
    confirmPassword: z.string().min(6, { message: "La contraseña debe tener más de 6 caracteres" }).max(32, {
       message: "La contraseña debe tener menos de 32 caracteres",
    }).superRefine((val: string, ctx) => {
@@ -43,8 +39,6 @@ export const registerSchema = z.object({
       }
    }),
 
-=======
->>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
    is_deaf: z.boolean().optional(),
    is_mute: z.boolean().optional(),
 
@@ -69,11 +63,6 @@ export const loginSchema = z.object({
    email: z
       .string({ required_error: "El correo electrónico es obligatorio" })
       .email({ message: "Correo electrónico no válido" }),
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> 792c761f0fc856ac30dbf917f8dd48c37553f6e0
    password: z
       .string({ required_error: "La contraseña es obligatoria" })
       .min(6, { message: "La contraseña debe tener más de 6 caracteres" })
