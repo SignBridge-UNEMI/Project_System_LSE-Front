@@ -139,12 +139,19 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
     npm install
     ```
 
-3.  **Crea un archivo .env.local y agrega las siguientes variables:**
+3.  **Crea un archivo ```.env.local``` y agrega las siguientes variables:**
 
     ```bash
-    NEXT_PUBLIC_CLERK_FRONTEND_API=tu_clerk_api_key
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=tu_clerk_api_key
+    CLERK_SECRET_KEY=tu_clerk_api_key
     NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
     ```
+    
+    - **Para obtener** ```NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY``` y ```CLERK_SECRET_KEY``` :
+
+        1. Crea una cuenta en [Clerk](https://clerk.dev).
+        2. Crea un nuevo proyecto en tu cuenta de Clerk.
+        3. Accede a la sección de API Keys en el panel de control de Clerk para obtener las claves necesarias.
 
 4.  **Inicia el servidor de desarrollo:**
 
