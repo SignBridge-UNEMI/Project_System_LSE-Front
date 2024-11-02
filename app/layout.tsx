@@ -3,14 +3,8 @@ import { Noto_Sans_Display } from "next/font/google";
 import {Toaster} from "@/components/ui/toaster"
 import "./globals.css";
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
+  ClerkProvider
 } from '@clerk/nextjs'
-
-
 
 
 const noto = Noto_Sans_Display({ subsets: ["latin"] });
