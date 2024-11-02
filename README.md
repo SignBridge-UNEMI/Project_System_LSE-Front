@@ -13,20 +13,22 @@ Bienvenido/a al **Traductor de Lengua de Señas (LSE)**, un proyecto innovador q
 
 ## 🛠️ Tecnologías Utilizadas
 
-**Backend**:  
-- 🐍 Django  
-- 🐘 PostgreSQL  
-- 🤖 TensorFlow  
-- 🔮 Keras  
-- 🎥 OpenCV  
-- ☁️ Amazon AWS  
+**Backend**:
 
-**Frontend**:  
-- ⚛️ Next.js  
-- ⚡ React  
-- 🎨 Tailwind CSS  
-- 🛠️ Shadcn  
-- 🔑 ClerkJS  
+- 🐍 Django
+- 🐘 PostgreSQL
+- 🤖 TensorFlow
+- 🔮 Keras
+- 🎥 OpenCV
+- ☁️ Amazon AWS
+
+**Frontend**:
+
+- ⚛️ Next.js
+- ⚡ React
+- 🎨 Tailwind CSS
+- 🛠️ Shadcn
+- 🔑 ClerkJS
 
 ---
 
@@ -34,25 +36,27 @@ Bienvenido/a al **Traductor de Lengua de Señas (LSE)**, un proyecto innovador q
 
 **Prerrequisitos:**
 
-*   **Python:** Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde [https://www.python.org/](https://www.python.org/).
-*   **PostgreSQL:** Descarga e instala PostgreSQL desde [https://www.postgresql.org/](https://www.postgresql.org/).
-    *   **Configuración:**
-        *   Crea una base de datos para el proyecto.
-        *   Crea un usuario y otorga los permisos necesarios sobre la base de datos.
-        *   Actualiza el archivo `settings.py` de Django con la información de conexión a tu base de datos:
+- **Python:** Asegúrate de tener Python instalado en tu sistema. Puedes descargarlo desde [https://www.python.org/](https://www.python.org/).
+- **PostgreSQL:** Descarga e instala PostgreSQL desde [https://www.postgresql.org/](https://www.postgresql.org/).
 
-            ```python
-            DATABASES = {
-                'default': {
-                    'ENGINE': 'django.db.backends.postgresql',
-                    'NAME': 'tu_base_de_datos',  # Reemplaza con el nombre de tu base de datos
-                    'USER': 'tu_usuario',        # Reemplaza con tu usuario de PostgreSQL
-                    'PASSWORD': 'tu_contraseña',  # Reemplaza con tu contraseña
-                    'HOST': 'localhost',
-                    'PORT': '5432',
-                }
-            }
-            ```
+  - **Configuración:**
+
+    - Crea una base de datos para el proyecto.
+    - Crea un usuario y otorga los permisos necesarios sobre la base de datos.
+    - Actualiza el archivo `settings.py` de Django con la información de conexión a tu base de datos:
+
+      ```python
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.postgresql',
+              'NAME': 'tu_base_de_datos',  # Reemplaza con el nombre de tu base de datos
+              'USER': 'tu_usuario',        # Reemplaza con tu usuario de PostgreSQL
+              'PASSWORD': 'tu_contraseña',  # Reemplaza con tu contraseña
+              'HOST': 'localhost',
+              'PORT': '5432',
+          }
+      }
+      ```
 
 ### 1️⃣ Clona los Repositorios 📂
 
@@ -88,13 +92,13 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
     pip install -r requirements.txt
     ```
 
-4.  **Crea un archivo  ```.env ``` y agrega tu  ```SECRET_KEY ```: 🤫**
+4.  **Crea un archivo `.env ` y agrega tu `SECRET_KEY `: 🤫**
 
     ```bash
-    SECRET_KEY=tu_clave_secreta_aquí 
+    SECRET_KEY=tu_clave_secreta_aquí
     ```
-    
-    - **Reemplaza** ```tu_clave_secreta_aquí``` con una clave secreta segura. Puedes generar una nueva usando:
+
+    - **Reemplaza** `tu_clave_secreta_aquí` con una clave secreta segura. Puedes generar una nueva usando:
 
     ```bash
     python -c 'import secrets; print(secrets.token_urlsafe(50))'
@@ -121,9 +125,8 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
 
 8.  **Acceder al backend:**
 
-    *   Abre tu navegador web y visita: [http://127.0.0.1:8000/](http://127.0.0.1:8000/).🎉
-    *   Accede al panel de administración: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (utiliza las credenciales del superusuario).
-
+    - Abre tu navegador web y visita: [http://127.0.0.1:8000/](http://127.0.0.1:8000/).🎉
+    - Accede al panel de administración: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (utiliza las credenciales del superusuario).
 
 ### 3️⃣ Configura el Frontend 🌐
 
@@ -139,19 +142,19 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
     npm install
     ```
 
-3.  **Crea un archivo ```.env.local``` y agrega las siguientes variables:**
+3.  **Crea un archivo `.env.local` y agrega las siguientes variables:**
 
     ```bash
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=tu_clerk_api_key
     CLERK_SECRET_KEY=tu_clerk_api_key
     NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
     ```
-    
-    - **Para obtener** ```NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY``` y ```CLERK_SECRET_KEY``` :
 
-        1. Crea una cuenta en [Clerk](https://clerk.dev).
-        2. Crea un nuevo proyecto en tu cuenta de Clerk.
-        3. Accede a la sección de API Keys en el panel de control de Clerk para obtener las claves necesarias.
+    - **Para obtener** `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` **y** `CLERK_SECRET_KEY` :
+
+      - Crea una cuenta en [Clerk](https://clerk.dev).
+      - Crea un nuevo proyecto en tu cuenta de Clerk.
+      - Accede a la sección de API Keys en el panel de control de Clerk para obtener las claves necesarias.
 
 4.  **Inicia el servidor de desarrollo:**
 
@@ -161,7 +164,7 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
 
 5.  **Acceder al frontend:**
 
-    *   Abre tu navegador web y visita: [http://localhost:3000/](http://localhost:3000/).🚀
+    - Abre tu navegador web y visita: [http://localhost:3000/](http://localhost:3000/).🚀
 
 ---
 
@@ -169,9 +172,9 @@ git clone https://github.com/SignBridge-UNEMI/Project_System_LSE-Front.git
 
 ¡Nos encantaría contar con tu ayuda para mejorar este proyecto! Ya seas desarrollador, diseñador, experto en accesibilidad o simplemente alguien interesado en la lengua de señas, tu participación es valiosa. Puedes contribuir de las siguientes maneras:
 
-- 🐛 **Reporta Bugs**: Si encuentras algún problema, por favor crea una *issue*.
+- 🐛 **Reporta Bugs**: Si encuentras algún problema, por favor crea una _issue_.
 - 💡 **Sugerencias**: Si tienes ideas o sugerencias, ¡somos todo oídos!
-- 🛠️ **Pull Requests**: ¡Envía tus mejoras o nuevas características a través de un *pull request*!
+- 🛠️ **Pull Requests**: ¡Envía tus mejoras o nuevas características a través de un _pull request_!
 - 🌍 **Difunde**: Comparte este proyecto con otros para que más personas se beneficien.
 
 Juntos podemos hacer que este proyecto sea más inclusivo y útil para la comunidad. 🤝
