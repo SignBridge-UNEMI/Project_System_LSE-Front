@@ -5,7 +5,7 @@ export default function page() {
   return (
     <div>
       <HeaderCompanies/>
-      <p>Modulo de Traduccion</p>
+      <p>Modulo de Traducción</p>
       <BodyTraduccion/>
     </div>
 

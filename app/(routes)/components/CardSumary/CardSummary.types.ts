@@ -2,10 +2,8 @@ import { LucideIcon } from "lucide-react"
 
 export type CardSummaryProps = {
     icon: LucideIcon;
-    total: string;
-    average: number;
+    descip: string;
     title: string;
     tooltipText: string;
-
-
+    href?: string;
 }

@@ -1,56 +1,49 @@
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 import { CardSummary } from "./components/CardSumary";
-import { BookOpenCheck, List, UsersRound, Waypoints,Banknote } from "lucide-react";
-import { LastCustomers } from "./components/LastCustomers";
-import { SalesDistributors } from "./components/SalesDistributors";
-import { TotalSuscribers } from "./components/TotalSuscribers";
-import { ListIntegrations } from "./components/ListIntegrations";
+import { UsersRound, Waypoints, Banknote } from "lucide-react";
 
 export const dataCardsSummary = [
   {
     icon: UsersRound,
-    total: "abrir",
-    average: 15,
+    descip: "Accede al traductor de lenguaje de señas",
     title: "Traductor de lenguaje de señas",
-    tooltipText: "Traduce el lenguaje de señas a texto",
+    tooltipText: "Traduce el lenguaje de señas a texto en tiempo real",
+    href: "/prediction",
   },
   {
     icon: Waypoints,
-    total: "Tutoriales, enlaces a informacion sobre lenguaje de señas",
-    average: 80,
+    descip: "Encuentra tutoriales y recursos educativos",
     title: "Contenido Educativo",
-    tooltipText: "Aprende más sobre la comunidad sorda del Ecuador",
+    tooltipText: "Aprende sobre la comunidad sorda del Ecuador y el lenguaje de señas",
+    href: "/prediction/educational-content",
   },
   {
     icon: Banknote,
-    total: "Banco de palabras",
-    average: 30,
-    title: "Learning",
-    tooltipText: "Aprende con nosotros.",
+    descip: "Información detallada sobre el lenguaje de señas",
+    title: "Infórmate",
+    tooltipText: "Descubre y aclara tus dudas sobre el lenguaje de señas",
+    href: "/prediction/learning",
   },
-]
+];
+
 export default function Home() {
   return (
     <div>
       <h2 className="text-2xl mb-4">Dashboard</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-x-20 " >
-        {dataCardsSummary.map(({icon, total, average, title, tooltipText}) => (
-          <CardSummary
-          key={title}
-          icon={icon}
-          total={total}
-          average={average}
-          title={title}
-          tooltipText={tooltipText}
-          />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl px-4">
+        {dataCardsSummary.map(({ icon, descip, title, tooltipText, href }) => (
+          <Link key={title} href={href} passHref>
+            <div className="cursor-pointer">
+              <CardSummary
+                icon={icon}
+                descip={descip}
+                title={title}
+                tooltipText={tooltipText}
+              />
+            </div>
+          </Link>
         ))}
       </div>
-      {/* Generar un nuevo componente */}
-      
-      
-
-      
     </div>
   );
 }

@@ -30,18 +30,6 @@ export const dataGeneralSidebar = [
     }
 ];
 
-export const dataToolsSidebar = [
-    {
-        icon: CircleHelpIcon,
-        label: "Faqs",
-        href: "/faqs",
-    },
-    {
-        icon: BarChart4,
-        label: "Analytics",
-        href: "/analytics",
-    },
-];
 export const dataSupportSidebar = [        
     {
         icon: Settings,

@@ -1,7 +1,7 @@
 "use client"
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import {dataGeneralSidebar, dataSupportSidebar, dataToolsSidebar} from './SidebarRoutes.data';
+import {dataGeneralSidebar, dataSupportSidebar} from './SidebarRoutes.data';
 import { SidebarItem } from '../SidebarItem';
 
 export  function SidebarRoutes() {
@@ -11,14 +11,6 @@ export  function SidebarRoutes() {
                 <div className='p-2 md:p-6'>
                     <p className='text-slate-500 mb-2'>GENERAL</p>
                     {dataGeneralSidebar.map((item) => ( 
-                        <SidebarItem key={item.label} item={item} />                   
-                    ))}
-                </div>
-
-                <Separator />
-                <div className='p-2 md:p-6'>
-                    <p className='text-slate-500 mb-2'>TOOLS</p>
-                    {dataToolsSidebar.map((item) => ( 
                         <SidebarItem key={item.label} item={item} />                   
                     ))}
                 </div>
