@@ -1,0 +1,88 @@
+# Git ignore file for Next.js projects
+
+# =====================================
+# Documentación: https://help.github.com/articles/ignoring-files/
+# =====================================
+
+# ================================
+# Dependencias
+# ================================
+/node_modules            # Directorio donde se instalan las dependencias de npm
+/.pnp                    # Archivos de Plug'n'Play (usados por Yarn)
+/.pnp.js
+.yarn/install-state.gz    # Archivo de estado de instalación de Yarn
+
+# ================================
+# Directorios de build/compilación
+# ================================
+/.next/
+/out/                    # Directorio de compilación de Next.js
+/out                     # Directorio de exportación de Next.js (para builds estáticos)
+/build                   # Directorio de build de producción (si se usa)
+
+# ================================
+# Archivos de logs
+# ================================
+npm-debug.log*           # Logs de npm en caso de fallos
+yarn-debug.log*          # Logs de Yarn en caso de fallos
+yarn-error.log*          # Logs de errores de Yarn
+
+# ================================
+# Testing y cobertura
+# ================================
+/coverage                # Directorio de cobertura de código generado por herramientas de testing
+
+# ================================
+# Archivos de ambiente (local)
+# ================================
+.env                     # Archivo de variables de entorno
+.env*.local              # Archivos de variables de entorno específicas para distintos entornos (dev, prod, test)
+.env.local               # Archivo de variables de entorno local
+.env.development.local   # Ambiente de desarrollo
+.env.test.local          # Ambiente de testeo
+.env.production.local    # Ambiente de producción
+
+# ================================
+# Archivos de Vercel
+# ================================
+.vercel                 # Configuración y archivos generados por despliegues en Vercel
+
+# ================================
+# Archivos de Netlify (opcional, si usas Netlify)
+/.netlify                # Configuración y archivos generados por Netlify
+
+# ================================
+# Archivos de TypeScript
+# ================================
+*.tsbuildinfo            # Información de compilación de TypeScript
+next-env.d.ts            # Archivo generado por Next.js para configurar TypeScript
+
+# ================================
+# Miscelánea
+# ================================
+.DS_Store                # Archivos de sistema generados por macOS
+*.pem                    # Archivos de certificados o claves privadas, que no deberían subirse
+
+# ================================
+# Archivos de configuraciones de IDE/Editor
+# ================================
+/.vscode/                # Configuración del editor Visual Studio Code
+/.idea/                  # Configuración de IntelliJ IDEA
+/*.sublime-project       # Archivos de proyecto de Sublime Text
+/*.sublime-workspace     # Archivos de espacio de trabajo de Sublime Text
+
+# ================================
+# Storybook (si usas Storybook)
+/.storybook              # Configuración de Storybook
+/storybook-static        # Archivos generados estáticamente por Storybook
+
+# ================================
+# Directorios y archivos adicionales
+/.turbo                  # Directorio generado por TurboRepo (si usas monorepos)
+*.log                    # Archivos de log genéricos
+*.swp                    # Archivos temporales de swap generados por editores de texto (ej. Vim)
+*.swo                    # Otros archivos de swap
+node_modules
+
+.env
+.env.local
