@@ -22,7 +22,7 @@ export default function LayoutAuth({children} : {children: React.ReactNode}) {
                         width={500} 
                         height={400} 
                         className="" 
-                        style={{ marginRight:"150px"}}
+                        style={{ marginRight:"150px"}} // Ajusta el margen según necesites
                     />
                 </div>
             </div>

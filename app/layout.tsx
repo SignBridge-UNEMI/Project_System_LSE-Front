@@ -16,8 +16,8 @@ import {
 const noto = Noto_Sans_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dashboard",
-  description: "Proyecto universitario",
+  title: "Traductor - LSE",
+  description: "Aplicación web innovadora que facilita la comunicación entre personas oyentes y sordas, traduciendo en tiempo real el lenguaje de señas ecuatoriano a texto y voz.",
 };
 
 export default function RootLayout({
