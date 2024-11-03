@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CardSummary } from "./components/CardSumary";
 import { UsersRound, Waypoints, Banknote } from "lucide-react";
 
-export const dataCardsSummary = [
+const dataCardsSummary = [
   {
     icon: UsersRound,
     descip: "Accede al traductor de lenguaje de señas",
