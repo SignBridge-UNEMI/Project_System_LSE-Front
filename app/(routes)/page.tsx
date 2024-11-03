@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CardSummary } from "./components/CardSumary";
-import { UsersRound, Waypoints, Banknote } from "lucide-react";
+import { UsersRound, BookA, BookOpen, MessageSquarePlus } from "lucide-react";
 
 const dataCardsSummary = [
   {
@@ -11,17 +11,24 @@ const dataCardsSummary = [
     href: "/prediction",
   },
   {
-    icon: Waypoints,
+    icon: BookA,
     descip: "Encuentra tutoriales y recursos educativos",
     title: "Contenido Educativo",
     tooltipText: "Aprende sobre la comunidad sorda del Ecuador y el lenguaje de señas",
     href: "/prediction/educational-content",
   },
   {
-    icon: Banknote,
+    icon: BookOpen,
     descip: "Información detallada sobre el lenguaje de señas",
     title: "Infórmate",
     tooltipText: "Descubre y aclara tus dudas sobre el lenguaje de señas",
+    href: "/prediction/learning",
+  },
+  {
+    icon: MessageSquarePlus,
+    descip: "Agrega una seña que no encuentres en el modelo",
+    title: "Registra una seña",
+    tooltipText: "Registra o agrega una seña que no encuentres en el modelo",
     href: "/prediction/learning",
   },
 ];

@@ -25,11 +25,6 @@ export  function SidebarRoutes() {
             </div>
 
             <div>
-                {/* <div className='text-center p-6'>
-                    <Button variant="outline" className='w-full'>
-                        Upgrade Plan 
-                    </Button>
-                </div> */}
                 <Separator />
                 <footer className='mt-3 p-3 text-center'>
                     2024. All rights reserved
