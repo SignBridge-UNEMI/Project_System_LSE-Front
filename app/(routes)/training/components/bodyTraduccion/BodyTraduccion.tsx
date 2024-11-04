@@ -1,5 +1,6 @@
 "use client";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Play, Pause, Info, Eye, EyeOff, Volume2 } from "lucide-react";
 import { useState } from "react";
 import { useHolistic } from "./useHolistic";

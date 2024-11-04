@@ -6,7 +6,7 @@ export default function Page() {
     <div>
       <HeaderCompanies />
       <p>
-        Este módulo está diseñado para realizar la traducción de lenguaje de señas a texto y voz. Aquí podrás iniciar la cámara para capturar los movimientos de las manos y el cuerpo, y el sistema procesará los datos en tiempo real para ofrecer traducciones precisas.
+        En este módulo, podrás capturar muestras, normalizarlas, generar keypoints y entrenar el modelo. Sigue los pasos para configurar y optimizar el modelo de predicción.
       </p>
       <BodyTraduccion />
     </div>

@@ -1,15 +1,10 @@
 import {
-    BarChart4,
-    Building2,
     PanelsTopLeft,
     Settings,
     ShieldCheck,
-    CircleHelpIcon,
-    Calendar,
-    Circle,
-    Languages, // Added for translation module
-    Book, // Added for learning module
-    icons
+    Languages,
+    Book,
+    Hand,
 } from 'lucide-react'
 
 export const dataGeneralSidebar = [
@@ -19,13 +14,18 @@ export const dataGeneralSidebar = [
         href: "/",
     },
     {
-        icon: Languages, // Icon for Modulo de Traducción
-        label: "Modulo de Traducción",
+        icon: Languages,
+        label: "Módulo de Traducción",
         href: "/prediction",
     },
     {
-        icon: Book, // Icon for Modulo de Aprendizaje
-        label: "Modulo de Aprendizaje",
+        icon: Hand,
+        label: "Módulo de Registro de Seña",
+        href: "/training",
+    },
+    {
+        icon: Book,
+        label: "Módulo de Aprendizaje",
         href: "/learning",
     }
 ];

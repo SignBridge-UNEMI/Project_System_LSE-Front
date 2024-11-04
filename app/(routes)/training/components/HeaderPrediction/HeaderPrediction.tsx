@@ -6,7 +6,7 @@ export  function HeaderCompanies() {
 
     return (
         <div className="flex justify-between items-center">
-            <h2 className="text-2xl">Modulo de Traduccion</h2>
+            <h2 className="text-2xl">Modulo de Entrenamiento</h2>
         </div>
     )
 }

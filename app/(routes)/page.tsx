@@ -29,7 +29,7 @@ const dataCardsSummary = [
     descip: "Agrega una seña que no encuentres en el modelo",
     title: "Registra una seña",
     tooltipText: "Registra o agrega una seña que no encuentres en el modelo",
-    href: "/prediction/learning",
+    href: "/training",
   },
 ];
 
