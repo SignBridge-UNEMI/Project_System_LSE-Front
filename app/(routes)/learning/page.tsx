@@ -6,7 +6,7 @@ export default function Page() {
     <div>
       <HeaderCompanies />
       <p>
-        En este módulo, podrás capturar muestras, normalizarlas, generar keypoints y entrenar el modelo. Sigue los pasos para configurar y optimizar el modelo de predicción.
+        En este módulo, tendrás acceso a una variedad de recursos educativos para aprender el lenguaje de señas. Podrás explorar tutoriales, videos y materiales informativos que te ayudarán a comprender y utilizar el lenguaje de señas de manera efectiva. Sigue los pasos y aprovecha los recursos disponibles para mejorar tus habilidades en el lenguaje de señas.
       </p>
       <ContentEdu />
     </div>
