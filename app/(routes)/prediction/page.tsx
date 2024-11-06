@@ -1,5 +1,5 @@
 import { HeaderCompanies } from "./components/HeaderPrediction";
-import { BodyTraduccion } from "./components/bodyTraduccion/BodyTraduccion";
+import { BodyTraduccion } from "./components/bodyPrediction/BodyTraduccion";
 
 export default function Page() {
   return (

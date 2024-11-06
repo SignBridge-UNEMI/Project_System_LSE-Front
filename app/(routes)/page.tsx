@@ -15,14 +15,14 @@ const dataCardsSummary = [
     descip: "Encuentra tutoriales y recursos educativos",
     title: "Contenido Educativo",
     tooltipText: "Aprende sobre la comunidad sorda del Ecuador y el lenguaje de señas",
-    href: "/prediction/educational-content",
+    href: "/learning",
   },
   {
     icon: BookOpen,
     descip: "Información detallada sobre el lenguaje de señas",
     title: "Infórmate",
     tooltipText: "Descubre y aclara tus dudas sobre el lenguaje de señas",
-    href: "/prediction/learning",
+    href: "https://www.fenasec.ec/mod-gestion.html",
   },
   {
     icon: MessageSquarePlus,
