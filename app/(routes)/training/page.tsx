@@ -1,5 +1,5 @@
 import { HeaderCompanies } from "./components/HeaderTraining";
-import { BodyTraduccion } from "./components/bodyTraining/BodyTraining";
+import { BodyTraining } from "./components/bodyTraining/BodyTraining";
 
 export default function Page() {
   return (
@@ -8,7 +8,7 @@ export default function Page() {
       <p>
         En este módulo, podrás capturar muestras, normalizarlas, generar keypoints y entrenar el modelo. Sigue los pasos para configurar y optimizar el modelo de predicción.
       </p>
-      <BodyTraduccion />
+      <BodyTraining />
     </div>
   );
 }
