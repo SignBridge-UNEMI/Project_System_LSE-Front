@@ -22,7 +22,7 @@ export function BodyTraining() {
         else if (!handsDetected && isRecording) stopRecording();
         isCapturing && console.log("Landmarks capturados:", landmarks);
     }
-
++
     useEffect(() => {
         const initCamera = async () => {
             try {

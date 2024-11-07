@@ -1,7 +1,6 @@
 import React from "react";
 
 export function ContentEdu() {
-  // Definimos la lista de videos con su título, duración y URL específica
   const videos = [
     { title: "Saludos", duration: "1:57 min", url: "https://youtu.be/hMdReGv2Zbs?si=MmrZ_qTHjO90afuW" },
     { title: "Días de la semana", duration: "1:01", url: "https://youtu.be/2ggRyMCQCNg" },
@@ -39,7 +38,6 @@ export function ContentEdu() {
         </ul>
       </div>
 
-      {/* Sección de Contenido Popular */}
       <div className="w-full md:w-1/3 bg-gray-100 p-4 rounded-md">
         <h2 className="text-2xl font-bold mb-4">Popular</h2>
         <ul className="space-y-8">
@@ -59,7 +57,6 @@ export function ContentEdu() {
         </ul>
       </div>
 
-      {/* Video Embed */}
       <div className="w-full md:w-1/3 bg-white p-4 rounded-md shadow-md">
         <iframe
           width="100%"

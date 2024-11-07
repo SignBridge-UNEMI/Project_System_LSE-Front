@@ -36,7 +36,6 @@ export function BodyTraduccion() {
                 setLastPrediction(data.predicted_word);
                 setPredictedText(data.predicted_word);
 
-                // Agregar la predicción a la historia
                 setPredictionsHistory(prev => [...prev, { text: data.predicted_word, count: predictionCount }]);
             } else {
                 setPredictedText("Error en la predicción");
